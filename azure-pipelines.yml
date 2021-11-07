@@ -13,9 +13,10 @@ resources:
   repositories:
   - repository: SREWeb
     type: git
-    name: templates
-
+    name: SREWeb
+  
 steps:
-- template: PipelineTemplates/Dotnetbuildtemplate.yaml@templates
+- checkout: SREWeb
+- template: PipelineTemplates/Dotnetbuildtemplate.yaml@SREWeb
   parameters:
     buildConfiguration: 'Release'
