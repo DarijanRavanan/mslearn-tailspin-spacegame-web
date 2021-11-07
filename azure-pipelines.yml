@@ -9,7 +9,13 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: templates
+
 steps:
-- template: PipelineTemplates/Dotnetbuildtemplate.yaml
+- template: PipelineTemplates/Dotnetbuildtemplate.yaml@templates
   parameters:
     buildConfiguration: 'Release'
