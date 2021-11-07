@@ -9,9 +9,6 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-variables:
-  buildConfiguration: 'Release'
-
 steps:
 - template: PipelineTemplates/Dotnetbuildtemplate.yaml
   parameters:
