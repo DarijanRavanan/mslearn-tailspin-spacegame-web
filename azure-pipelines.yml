@@ -11,7 +11,7 @@ pool:
 
 resources:
   repositories:
-  - repository: templates
+  - repository: SREWeb
     type: git
     name: templates
 
